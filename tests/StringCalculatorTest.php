@@ -13,4 +13,21 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals(0, $result);
     }
+
+    public function testSingleInput()
+    {
+        $stringCalculator = new StringCalculator();
+
+        $result = $stringCalculator->add("2");
+
+        $this->assertEquals(2, $result);
+    }
+
+    public function testMultipleInput() {
+        $stringCalculator = new StringCalculator();
+
+        $result = $stringCalculator->add("1,2");
+
+        $this->assertEquals(3, $result);
+    } 
 }
